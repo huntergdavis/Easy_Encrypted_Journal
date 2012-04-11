@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_alignParentTop="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" ads:adUnitId="a14e0a1e7ecf0a1"
+		ads:adSize="BANNER" ads:loadAdOnCreate="true" />
+
+	<TextView android:text="Select A Previous Journal Entry Card"
+		android:id="@+id/flashtext" android:layout_width="fill_parent"
+		android:layout_height="wrap_content"></TextView>
+	<Spinner android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/oldentries" />
+	<TableRow android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="50dip"
+		android:id="@+id/tableRow1" android:layout_below="@+id/tableRowText"
+		android:visibility="visible" android:layout_gravity="fill_horizontal|bottom">
+		<Button android:text="Save Entry" android:layout_weight="1"
+			android:id="@+id/saveButton" android:layout_width="fill_parent"
+			android:enabled="false" android:layout_height="wrap_content"></Button>
+		<Button android:text="Delete Entry" android:layout_weight="1"
+			android:id="@+id/deleteButton" android:layout_width="fill_parent"
+			android:enabled="false" android:layout_height="wrap_content"></Button>
+		<Button android:text="New Entry" android:layout_weight="1"
+			android:id="@+id/newButton" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"></Button>
+	</TableRow>
+	<EditText android:layout_width="fill_parent" android:id="@+id/hiddentext"
+		android:text="Journal Entry" android:layout_height="fill_parent"
+		android:gravity="top|left" android:visibility="visible" android:enabled="false"
+		android:layout_below="@+id/tableRow1"></EditText>
+
+
+</LinearLayout>
